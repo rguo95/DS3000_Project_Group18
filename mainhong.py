@@ -5,7 +5,6 @@ This script loads a chess game dataset, extracts key variables such as ELO ratin
 and piece color, and applies basic statistical and machine learning models to
 estimate the probability that White or Black will win each game.
 
-NOTE: Replace 'games.csv' with the path to your dataset.
 """
 
 import pandas as pd
