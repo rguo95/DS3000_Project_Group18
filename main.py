@@ -24,11 +24,14 @@ import matplotlib.pyplot as plt
 # 1. LOAD DATA
 # =====================================================
 
-csv_path = r"C:\Users\marti\OneDrive - The University of Western Ontario\DS3000_Project_Group18\chess_games.csv"
+csv_path = r"C:\Users\Blazi\Year 3 Uni\DS3000\SemesterProject\DS3000_Project_Group18\chess_games.csv"
 
 print("Loading CSV from:", csv_path)
-df = pd.read_csv(csv_path)
-
+df = pd.read_csv(
+    csv_path,
+    engine="python",        # slower but more forgiving
+    on_bad_lines="skip",    # skip malformed lines
+)
 print("\nRaw shape:", df.shape)
 print("Columns:", df.columns.tolist())
 
